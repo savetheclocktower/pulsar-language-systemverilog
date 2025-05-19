@@ -1,0 +1,23 @@
+name: 'SystemVerilog'
+scopeName: 'source.systemverilog'
+type: 'modern-tree-sitter'
+parser: 'tree-sitter-verilog'
+
+fileTypes: [
+  'v'
+  'sv'
+  'vh'
+  'svh'
+]
+
+treeSitter:
+  grammar: 'tree-sitter/tree-sitter-systemverilog.wasm'
+  parserSource: 'github:tree-sitter/tree-sitter-verilog#227d277b6a1a5e2bf818d6206935722a7503de08'
+  highlightsQuery: 'tree-sitter/highlights.scm'
+  foldsQuery: 'tree-sitter/folds.scm'
+  indentsQuery: 'tree-sitter/indents.scm'
+
+comments:
+  start: '// '
+  block: ['/*', '*/']
+  line: '//'
